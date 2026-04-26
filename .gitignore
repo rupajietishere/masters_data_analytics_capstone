@@ -1,6 +1,10 @@
-# Ignore Data (Prevents large CSVs from crashing GitHub)
-data/
+# Ignore all CSV files by default (Prevents large files like WB_FINDEX.csv from crashing GitHub)
 *.csv
+
+# ALLOW the small microdata dataset to be uploaded (Exception to the rule above)
+!findex_microdata_2025_labelled_update112425.csv
+
+# (Note: WB_FINDEX.zip will be allowed automatically since it is a .zip, not a .csv)
 
 # Ignore Virtual Environment (CRITICAL)
 venv/
