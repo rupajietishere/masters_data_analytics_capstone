@@ -51,6 +51,7 @@ masters_data_analytics_capstone/
 ├── .gitignore                # Configured to track datasets while ignoring cache/venvs
 ├── requirements.txt          # Python dependencies
 └── README.md                 # Project documentation
+```
 
 ## 🛠️ Methodology & Tech Stack
 * **Language:** Python 3.x
