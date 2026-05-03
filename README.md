@@ -38,7 +38,7 @@ The empirical analysis employs a dual-dataset approach sourced from the **World 
 **Data Availability Note:** To comply with GitHub's strict 100 MB file size limits, the microdata dataset (~49 MB) is uploaded directly in its raw format. The larger macro indicators dataset (~153 MB) has been compressed into a `.zip` archive. The accompanying code/notebooks are configured using `pandas` to read directly from the `.zip` file, requiring no manual extraction.
 
 ## 🗂️ Repository Structure
-
+```text
 masters_data_analytics_capstone/
 │
 ├── data/
@@ -56,6 +56,7 @@ masters_data_analytics_capstone/
 ├── .gitignore                # Configured to track datasets while ignoring cache/venvs
 ├── requirements.txt          # Python dependencies
 └── README.md                 # Project documentation
+```
 
 ## 🛠️ Methodology & Tech Stack
 * **Language:** Python 3.x
