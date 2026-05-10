@@ -16,23 +16,23 @@ This capstone project transitions financial inclusion research from descriptive 
 
 🔹 **Research Question 1 (RQ1): Drivers of Adoption**
 > What socio-economic and infrastructural variables currently drive the successful adoption of digital banking across different global regions?
-> *   🔸 **Null Hypothesis ($H_0$):** There is no statistically significant correlation between specific variables and digital banking adoption ($\rho = 0$).
-> *   🔸 **Alternative Hypothesis ($H_a$):** There is a statistically significant correlation between specific variables and digital banking adoption ($\rho \neq 0$).
+>    🔸 **Null Hypothesis ($H_0$):** There is no statistically significant correlation between specific variables and digital banking adoption ($\rho = 0$).
+>    🔸 **Alternative Hypothesis ($H_a$):** There is a statistically significant correlation between specific variables and digital banking adoption ($\rho \neq 0$).
 
 🔹 **Research Question 2 (RQ2): Economic Resilience**
 > Is there a statistically significant association between national digital penetration levels and economic resilience indicators over time?
-> *   🔸 **Null Hypothesis ($H_0$):** There is no statistically significant association over time between penetration and resilience (the regression coefficient $\beta = 0$).
-> *   🔸 **Alternative Hypothesis ($H_a$):** There is a statistically significant association over time between penetration and resilience (the regression coefficient $\beta \neq 0$).
+>    🔸 **Null Hypothesis ($H_0$):** There is no statistically significant association over time between penetration and resilience (the regression coefficient $\beta = 0$).
+>    🔸 **Alternative Hypothesis ($H_a$):** There is a statistically significant association over time between penetration and resilience (the regression coefficient $\beta \neq 0$).
 
 🔹 **Research Question 3 (RQ3): Actionable Thresholds**
 > What specific actionable factors and infrastructural thresholds are required to enable a demographic transition to high digital banking usage?
-> *   🔸 **Null Hypothesis ($H_0$):** Specific actionable factors do not significantly affect the odds of a demographic adopting digital banking (Odds Ratio = 1).
-> *   🔸 **Alternative Hypothesis ($H_a$):** Specific actionable factors significantly affect the odds of a demographic adopting digital banking (Odds Ratio $\neq 1$).
+>    🔸 **Null Hypothesis ($H_0$):** Specific actionable factors do not significantly affect the odds of a demographic adopting digital banking (Odds Ratio = 1).
+>    🔸 **Alternative Hypothesis ($H_a$):** Specific actionable factors significantly affect the odds of a demographic adopting digital banking (Odds Ratio $\neq 1$).
 
 🔹 **Research Question 4 (RQ4): Geographic Clustering**
 > Do distinct geographic clusters exist within global digital banking infrastructure data, and if so, what investment strategies do they imply?
-> *   🔸 **Null Hypothesis ($H_0$):** The global geographic data exhibits no meaningful cluster structure (Silhouette Score $\le 0$).
-> *   🔸 **Alternative Hypothesis ($H_a$):** The global geographic data exhibits meaningful cluster structure (Silhouette Score $> 0$).
+>    🔸 **Null Hypothesis ($H_0$):** The global geographic data exhibits no meaningful cluster structure (Silhouette Score $\le 0$).
+>    🔸 **Alternative Hypothesis ($H_a$):** The global geographic data exhibits meaningful cluster structure (Silhouette Score $> 0$).
 
 ## 📊 Data Sources
 The analysis employs a dual-dataset approach sourced from the **World Bank Global Findex Database**:
