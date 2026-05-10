@@ -70,10 +70,11 @@ masters_data_analytics_capstone/
   * **Econometrics:** Pooled OLS Regression with Clustered Standard Errors.
 
 ## 🏆 Final Results Summary
-*   **Predictive Power (RQ3):** The model achieved a **Recall of 70.43%**, revealing that internet access increases adoption odds by **2.61 times**.
-*   **Econometric Significance (RQ2):** The Pooled OLS model explained **66.7% of the variance** ($R^2 = 0.667$), confirming internet infrastructure as the primary macro-driver.
-*   **Geospatial Segmentation (RQ4):** K-Means identified **3 distinct global infrastructural tiers** (Silhouette Score: 0.58).
-*   **Deployment:** Includes a simulation function predicting adoption probability (High-readiness: 84.4% vs. Low-readiness: 13.9%).
+*   **Socio-Economic Drivers (RQ1):** Correlation analysis identified **education ($r = 0.33$)** and **consistent internet access ($r = 0.31$)** as the most significant individual-level predictors of adoption. Cross-tabulations revealed a massive systemic disparity, with a **31% adoption gap** between the highest and lowest income quintiles.
+*   **Predictive Power (RQ3):** The Multivariate Logistic Regression model achieved a **Recall of 70.43%**, revealing that holding all other factors constant, internet access increases the odds of digital banking adoption by **2.61 times**.
+*   **Econometric Significance (RQ2):** The Pooled OLS model explained **66.7% of the variance** ($R^2 = 0.667$) in national digital penetration, confirming that at a macro level, internet infrastructure is the primary engine of financial inclusion.
+*   **Geospatial Segmentation (RQ4):** K-Means successfully identified **3 distinct global infrastructural tiers** (Silhouette Score: 0.58), while DBSCAN isolated developmental outliers, providing a roadmap for targeted investment.
+*   **Deployment Simulation:** A functional inference API demonstrated the model's practical utility, correctly identifying high-readiness profiles (84.4% probability) versus low-readiness profiles (13.9% probability).
 
 ## 💻 How to Run This Project Locally
 
