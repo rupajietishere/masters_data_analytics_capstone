@@ -8,34 +8,38 @@
 ---
 
 ## 📌 Project Overview
-Digital financial inclusion is a critical cornerstone of global economic development. While billions of dollars are invested annually by FinTech startups, commercial banks, and NGOs into digital infrastructure, global digital banking adoption rates remain highly asymmetric. Expanding into markets that lack prerequisite socio-economic readiness results in elevated customer acquisition costs and substantial financial losses.
+Digital financial inclusion is a critical cornerstone of global economic development. While billions of dollars are invested annually by FinTech startups, commercial banks, and NGOs into digital infrastructure, global digital banking adoption rates remain highly asymmetric. 
 
-This capstone project utilizes descriptive statistics, inferential hypothesis testing, predictive classification, and unsupervised machine learning to identify the exact infrastructural, technological, and socio-economic factors required to successfully transition demographics from low to high digital banking usage.
+This capstone project transitions financial inclusion research from descriptive reporting to predictive analytics. Using a dual-dataset approach, the study identifies the exact infrastructural and socio-economic thresholds required to successfully transition demographics from low to high digital banking usage.
 
 ## 🔬 Research Questions & Hypotheses
 
-* **RQ1 (Exploratory):** What socio-economic and infrastructural variables currently drive the successful adoption of digital banking across different global regions?
-  * **Null Hypothesis ($H_0$):** There is no statistically significant correlation between specific socio-economic/infrastructural variables (e.g., income, education, internet access) and the rate of digital banking adoption ($\rho = 0$).
-  * **Alternative Hypothesis ($H_a$):** There is a statistically significant correlation between specific socio-economic/infrastructural variables and the rate of digital banking adoption ($\rho \neq 0$).
+### Research Question 1 (RQ1): Drivers of Adoption
+*   **Question:** What socio-economic and infrastructural variables currently drive the successful adoption of digital banking across different global regions?
+*   **Null Hypothesis ($H_0$):** There is no statistically significant correlation between specific socio-economic/infrastructural variables and the rate of digital banking adoption ($\rho = 0$).
+*   **Alternative Hypothesis ($H_a$):** There is a statistically significant correlation between specific socio-economic/infrastructural variables and the rate of digital banking adoption ($\rho \neq 0$).
 
-* **RQ2 (Inferential):** Is there a statistically significant association between national digital banking penetration levels and economic resilience indicators across countries over time?
-  * **Null Hypothesis ($H_0$):** There is no statistically significant association between high digital banking penetration and national economic resilience indicators over time (the regression coefficient $\beta = 0$).
-  * **Alternative Hypothesis ($H_a$):** There is a statistically significant association between high digital banking penetration and national economic resilience indicators over time (the regression coefficient $\beta \neq 0$).
+### Research Question 2 (RQ2): Economic Resilience
+*   **Question:** Is there a statistically significant association between national digital banking penetration levels and economic resilience indicators across countries over time?
+*   **Null Hypothesis ($H_0$):** There is no statistically significant association over time between high digital banking penetration and national economic resilience indicators (the regression coefficient $\beta = 0$).
+*   **Alternative Hypothesis ($H_a$):** There is a statistically significant association over time between high digital banking penetration and national economic resilience indicators (the regression coefficient $\beta \neq 0$).
 
-* **RQ3 (Predictive):** What specific actionable factors and infrastructural thresholds are required to enable and transition a low-adoption demographic into a high digital banking usage category?
-  * **Null Hypothesis ($H_0$):** Specific actionable factors (such as reaching a certain education level or mobile access threshold) do not significantly affect the odds of a demographic adopting digital banking (Odds Ratio $= 1$).
-  * **Alternative Hypothesis ($H_a$):** Specific actionable factors significantly affect the odds of a demographic adopting digital banking (Odds Ratio $\neq 1$).
+### Research Question 3 (RQ3): Actionable Thresholds
+*   **Question:** What specific actionable factors and infrastructural thresholds are required to enable and transition a low-adoption demographic into a high digital banking usage category?
+*   **Null Hypothesis ($H_0$):** Specific actionable factors do not significantly affect the odds of a demographic adopting digital banking (Odds Ratio = 1).
+*   **Alternative Hypothesis ($H_a$):** Specific actionable factors significantly affect the odds of a demographic adopting digital banking (Odds Ratio $\neq 1$).
 
-* **RQ4 (Unsupervised):** Do distinct geographic clusters exist within global digital banking infrastructure data, and if so, what investment strategies do these clusters imply for governments and development institutions?
-  * **Null Hypothesis ($H_0$):** The global geographic data exhibits no meaningful cluster structure, as indicated by a Silhouette Score $\le 0$ and a high Davies-Bouldin Index.
-  * **Alternative Hypothesis ($H_a$):** The global geographic data exhibits meaningful cluster structure, as indicated by a Silhouette Score $> 0$ and a low Davies-Bouldin Index, enabling identification of distinct geographic groupings based on technological readiness.
+### Research Question 4 (RQ4): Geographic Clustering
+*   **Question:** Do distinct geographic clusters exist within global digital banking infrastructure data, and if so, what investment strategies do these clusters imply?
+*   **Null Hypothesis ($H_0$):** The global geographic data exhibits no meaningful cluster structure (Silhouette Score $\le 0$).
+*   **Alternative Hypothesis ($H_a$):** The global geographic data exhibits meaningful cluster structure (Silhouette Score $> 0$).
 
 ## 📊 Data Sources
-The empirical analysis employs a dual-dataset approach sourced from the **World Bank Global Findex Database**:
-1. **Primary Microdata (N = 144,091):** Individual-level survey responses used to evaluate socio-demographic readiness and calculate Odds Ratios via Logistic Regression. Included as `findex_microdata_2025_labelled_update112425.csv`.
-2. **Macro Indicators (N = 381,791):** Country-level aggregated percentages of financial inclusion metrics over time. Utilized for geospatial unsupervised clustering (K-Means/DBSCAN) and panel data regression. Included as `WB_FINDEX.zip`.
+The analysis employs a dual-dataset approach sourced from the **World Bank Global Findex Database**:
+1. **Primary Microdata (N = 144,091):** Individual-level survey responses (2021) used for demographic classification and Odds Ratio extraction.
+2. **Macro Indicators (N = 381,791):** Country-level aggregates (2011–2022) used for geospatial clustering and panel regression.
 
-**Data Availability Note:** To comply with GitHub's strict 100 MB file size limits, the microdata dataset (~49 MB) is uploaded directly in its raw format. The larger macro indicators dataset (~153 MB) has been compressed into a `.zip` archive. The accompanying code/notebooks are configured using `pandas` to read directly from the `.zip` file, requiring no manual extraction.
+**Data Availability Note:** To comply with GitHub's file size limits, the macro indicators dataset (`WB_FINDEX.zip`) is compressed. The notebooks are configured to read directly from the `.zip` archive using `pandas`.
 
 ## 🗂️ Repository Structure
 ```text
@@ -43,63 +47,54 @@ masters_data_analytics_capstone/
 │
 ├── data/
 │   ├── raw/
-│   │   ├── findex_microdata_2025_labelled_update112425.csv  # Primary Microdata dataset
-│   │   └── WB_FINDEX.zip                                    # Macro Indicators dataset (Compressed)
-│   │
-│   └── processed/
-│       └── .gitkeep                                         # Placeholder for cleaned data outputs
+│   │   ├── findex_microdata_2025_labelled_update112425.csv  # Microdata dataset
+│   │   └── WB_FINDEX.zip                                    # Macro Indicators (Compressed)
+│   └── processed/                                           # Placeholder for cleaned outputs
 │
 ├── notebooks/
-│   └── 01_EDA_and_Data_Cleaning.ipynb  # RQ1 & RQ3: Data Cleaning, EDA, Logistic Regression
+│   ├── 01_EDA_and_Data_Cleaning.ipynb          # RQ1 & RQ3: EDA, LogReg, & Deployment Sim
+│   └── 02_Macro_Modeling_and_Clustering.ipynb  # RQ2 & RQ4: Panel Regression & Clustering
 │
-├── reports/                  # PDF/Word drafts of the Synopsis and Interim Reports
-├── .gitignore                # Configured to track datasets while ignoring cache/venvs
+├── reports/                  # Final visual assets (ROC, Confusion Matrix, Clusters)
+├── .gitignore                # Project ignore rules
 ├── requirements.txt          # Python dependencies
 └── README.md                 # Project documentation
 ```
 
-## 🛠️ Methodology & Tech Stack
-* **Language:** Python 3.x
-* **Libraries:** `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`
-* **Modeling Techniques:** 
-  * Pearson/Spearman Correlation (EDA)
-  * Multivariate Logistic Regression (Odds Ratio Extraction)
-  * Panel Data Regression *(In Progress)*
-  * K-Means & DBSCAN Clustering *(In Progress)*
+## 🛠️ Tech Stack & Methodology
+* **Language:** Python 3.10
+* **Libraries:** `pandas`, `numpy`, `matplotlib`, `seaborn`, `scikit-learn`, `linearmodels`, `statsmodels`
+* **Methodologies:** 
+  * **Supervised Learning:** Multivariate Logistic Regression (RQ3).
+  * **Unsupervised Learning:** K-Means (Elbow Method) and DBSCAN (Outlier Detection) (RQ4).
+  * **Econometrics:** Pooled OLS Regression with Clustered Standard Errors (RQ2).
+  * **Inference:** Extracting Odds Ratios ($e^\beta$) for actionable business thresholds.
 
-## 🚀 Current Progress (Interim Phase)
-- [x] Defined Research Methodology & Capstone Synopsis.
-- [x] Environment configuration and Git repository setup.
-- [x] Cleaned and pre-processed the Global Findex Microdata.
-- [x] Completed Exploratory Data Analysis (Correlation matrices, cross-tabulations).
-- [x] Deployed baseline Logistic Regression model (**Accuracy:** 67.57%, **Recall:** 70.43%).
-- [x] Extracted Odds Ratios confirming internet access and education as primary adoption drivers.
-- [ ] *Next Phase: Clean and merge Macroeconomic dataset.*
-- [ ] *Next Phase: Execute K-Means & DBSCAN geospatial clustering (RQ4).*
+## 🏆 Final Results Summary
+*   **Predictive Power (RQ3):** The Logistic Regression model achieved a **Recall of 70.43%**, revealing that consistent internet access increases the odds of digital banking adoption by **2.61 times**.
+*   **Econometric Significance (RQ2):** The Pooled OLS model explained **66.7% of the variance** ($R^2 = 0.667$) in national digital penetration, confirming internet infrastructure as the primary macro-driver.
+*   **Geospatial Segmentation (RQ4):** K-Means successfully identified **3 distinct global infrastructural tiers** (Silhouette Score: 0.58), providing a roadmap for targeted investment.
+*   **Deployment:** The project includes a deployment simulation function that predicts adoption probability (e.g., High-readiness: 84.4% vs. Low-readiness: 13.9%).
 
 ## 💻 How to Run This Project Locally
 
-1. Clone this repository:
+1. **Clone the repository:**
     ```bash
     git clone https://github.com/rupajietishere/masters_data_analytics_capstone.git
-    ```
-
-2. Navigate to the project directory:
-    ```bash
     cd masters_data_analytics_capstone
     ```
 
-3. Create a virtual environment and activate it:
+2. **Set up Virtual Environment:**
     ```bash
     python -m venv venv
-    source venv/bin/activate  # On Windows use: .\venv\Scripts\activate
+    .\venv\Scripts\activate  # Windows
+    # source venv/bin/activate  # Mac/Linux
     ```
 
-4. Install the required dependencies:
+3. **Install Dependencies:**
     ```bash
     pip install -r requirements.txt
     ```
 
-5. Download the raw data from the World Bank and place it in the `data/raw/` folder.
-
-6. Open Jupyter via VS Code and execute the notebooks in the `notebooks/` directory.
+4. **Execute Notebooks:**
+    Run the notebooks in the `notebooks/` directory sequentially. The code handles the compressed data automatically.
