@@ -55,7 +55,7 @@ masters_data_analytics_capstone/
 │   ├── 01_Microdata_EDA_and_Predictive_Modeling.ipynb   # RQ1 & RQ3: EDA, LogReg, & Deployment Sim
 │   └── 02_Macrodata_Econometrics_and_Clustering.ipynb   # RQ2 & RQ4: Panel Regression & Clustering
 │
-├── reports/                  # Project Documentation (Synopsis, Interim, & Final Reports)
+├── reports/                  # Project Documentation (Final Report)
 ├── .gitignore                # Project ignore rules
 ├── requirements.txt          # Python dependencies
 └── README.md                 # Project documentation
