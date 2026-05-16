@@ -52,8 +52,8 @@ masters_data_analytics_capstone/
 │   └── processed/                                           # Reserved for future data exports
 │
 ├── notebooks/
-│   ├── 01_EDA_and_Data_Cleaning.ipynb          # RQ1 & RQ3: EDA, LogReg, & Deployment Sim
-│   └── 02_Macro_Modeling_and_Clustering.ipynb  # RQ2 & RQ4: Panel Regression & Clustering
+│   ├── 01_Microdata_EDA_and_Predictive_Modeling.ipynb   # RQ1 & RQ3: EDA, LogReg, & Deployment Sim
+│   └── 02_Macrodata_Econometrics_and_Clustering.ipynb   # RQ2 & RQ4: Panel Regression & Clustering
 │
 ├── reports/                  # Project Documentation (Synopsis, Interim, & Final Reports)
 ├── .gitignore                # Project ignore rules
